@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8">
+        <title>CNM Tech - incidència</title>
+        <link rel="stylesheet" href="estils.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+       <header>
+            <div class="logo">
+            <img src="https://drive.google.com/thumbnail?authuser=0&sz=w1000&id=1g7t62JG7ft6DMXLhH-ScgvucbLBqL9SJ" width="100px">
+        </div>
+
+        <div class="dadesempresa">
+            <p><strong>Adreça:</strong> Carrer de Cartellà, 48, Nou Barris, 08031, Barcelona</p>
+            <p><strong>NIF:</strong> B87305628</p>
+            <p><strong>Telèfon:</strong> 622 562 737</p>
+            <p><strong>Correu:</strong> chnumi25@bemen3.cat</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="inici.html">Inici</a></li>
+                <li><a href="tarifes.html">Tarifes</a></li>
+                <li><a href="som.html">Qui som</a></li>
+                <li><a href="contacte.html">Contacte</a></li>
+                <li><a href="incidencia.html">Envia la teva incidència</a></li>
+            </ul>
+        </nav>
+        </section>
+
+        <section id="formulari">
+
+            <h2>Envia la teva incidència</h2>
+
+            <form>
+
+                <fieldset>
+                    <legend>Dades del Client</legend>
+
+                    <label>Nom:</label><br>
+                    <input type="text" required><br><br>
+
+                    <label>Correu electrònic:</label><br>
+                    <input type="email" required><br><br>
+
+                    <label>Telèfon:</label><br>
+                    <input type="tel" required><br><br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Identificació de l'Equip</legend>
+
+                    <label>Marca / Model:</label><br>
+                    <input type="text"><br><br>
+
+                    <label>Sistema Operatiu:</label><br>
+                    <select>
+                        <option>Windows</option>
+                        <option>Linux</option>
+                        <option>macOS</option>
+                    </select>
+
+                    <br><br>
+
+                    <label>Tipus d'equip:</label><br>
+
+                    <input type="radio" name="equip"> Sobretaula
+                    <input type="radio" name="equip"> Portàtil
+                    <input type="radio" name="equip"> Servidor
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Components afectats</legend>
+
+                    <div class="components-list">
+                        <label><input type="checkbox"> <i class="fas fa-database"></i> Disc dur</label>
+                        <label><input type="checkbox"> <i class="fas fa-memory"></i> RAM</label>
+                        <label><input type="checkbox"> <i class="fas fa-fan"></i> CPU</label>
+                        <label><input type="checkbox"> <i class="fas fa-microchip"></i> Placa Base</label>
+                        <label><input type="checkbox"> <i class="fas fa-plug"></i> Font d'alimentació</label>
+                        <label><input type="checkbox"> <i class="fas fa-video"></i> Targeta gràfica</label>
+                    </div>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Descripció de l'Avaria</legend>
+
+                    <label>Símptomes:</label><br>
+                    <textarea rows="4" cols="50"></textarea>
+
+                    <br><br>
+
+                    <label>Beeps o errors:</label><br>
+                    <textarea rows="3" cols="50"></textarea>
+
+                    <br><br>
+
+                    <label>Darrera acció abans de l'error:</label><br>
+                    <textarea rows="3" cols="50"></textarea>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Urgència</legend>
+
+                    <select>
+                        <option>Baixa</option>
+                        <option>Mitjana</option>
+                        <option>Alta</option>
+                        <option>Crítica</option>
+                    </select>
+                </fieldset>
+
+                <br>
+
+                <input type="submit" value="Enviar incidència">
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 CNM Tech</p>
+
+        <p>
+            <a href="https://instagram.com" title="Instagram"><i class="fab fa-instagram"></i></a> | <a href="https://facebook.com" title="Facebook"><i class="fab fa-facebook"></i></a> | <a href="https://x.com" title="X"><i class="fab fa-x-twitter"></i></a> | <a href="https://linkedin.com" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </p>
+
+        <p>
+            <a href="#">Política de Privacitat</a> |
+            <a href="#">Avís Legal</a>
+        </p>
+
+        <p>
+            Horari d'atenció: Dilluns a Divendres de 9:00 a 16:00
+        </p>
+
+    </footer>
+    </body>
+</html>
