@@ -21,6 +21,20 @@ section {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+nav {
+    position: sticky;
+
+    body {
+        font-family: Verdana, sans-serif;
+        background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+        margin: 0;
+        color: #222;
+        -webkit-font-smoothing: antialiased;
+    }
+    top: 0;
+    z-index: 100;
+}
+
 header {
     text-align: center;
 }
@@ -50,6 +64,43 @@ li {
     line-height: 1.6;
 }
 
+
+    /* Animations */
+    .fade-in-up {
+        animation: fadeInUp 600ms ease both;
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* enhanced link transitions */
+    nav a {
+        transition: all 180ms ease;
+        position: relative;
+    }
+
+    nav a::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -6px;
+        height: 3px; border-radius: 3px;
+        background: transparent; transform: scaleX(0); transform-origin: left;
+        transition: transform 220ms ease, background 220ms ease;
+    }
+
+    nav a:hover::after { transform: scaleX(1); background: var(--primary); }
+
+    header img { transition: transform 450ms ease, box-shadow 450ms ease; }
+    header img:hover { transform: translateY(-6px) scale(1.08); box-shadow: 0 10px 30px rgba(12, 109, 255, 0.12); }
+
+    .contenidor > header { text-align: center; }
+    .contenidor > header, .contenidor > section { will-change: transform, opacity; }
+    .contenidor > header { animation: fadeInUp 700ms ease both; }
+    .contenidor > section { animation: fadeInUp 700ms ease 150ms both; }
+
+    .video { border-radius: 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
 nav ul {
     list-style: none;
     padding: 5px;
@@ -68,6 +119,13 @@ nav a:hover,
 a:hover {
     text-decoration: underline;
     color: blue;
+}
+
+nav a.active {
+    color: #fff;
+    background-color: #0c6dff;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
 footer {
